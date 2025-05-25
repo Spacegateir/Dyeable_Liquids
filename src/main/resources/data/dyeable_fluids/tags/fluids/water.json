@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+
+    "dyeable_liquids:soap_water",
+    "dyeable_liquids:flowing_soap_water"
+
+  ]
+}
