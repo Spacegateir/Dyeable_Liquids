@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dyeable_liquids:block/black_lava_block"
+    }
+  }
+}

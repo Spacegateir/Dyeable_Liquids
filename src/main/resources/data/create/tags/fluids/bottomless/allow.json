@@ -2,6 +2,41 @@
   "replace": false,
   "values": [
 
+    "dyeable_liquids:white_water",
+    "dyeable_liquids:light_gray_water",
+    "dyeable_liquids:gray_water",
+    "dyeable_liquids:black_water",
+    "dyeable_liquids:brown_water",
+    "dyeable_liquids:red_water",
+    "dyeable_liquids:orange_water",
+    "dyeable_liquids:yellow_water",
+    "dyeable_liquids:lime_water",
+    "dyeable_liquids:green_water",
+    "dyeable_liquids:cyan_water",
+    "dyeable_liquids:light_blue_water",
+    "dyeable_liquids:blue_water",
+    "dyeable_liquids:purple_water",
+    "dyeable_liquids:magenta_water",
+    "dyeable_liquids:pink_water",
+
+    "dyeable_liquids:white_lava",
+    "dyeable_liquids:light_gray_lava",
+    "dyeable_liquids:gray_lava",
+    "dyeable_liquids:black_lava",
+    "dyeable_liquids:brown_lava",
+    "dyeable_liquids:red_lava",
+    "dyeable_liquids:orange_lava",
+    "dyeable_liquids:yellow_lava",
+    "dyeable_liquids:lime_lava",
+    "dyeable_liquids:green_lava",
+    "dyeable_liquids:cyan_lava",
+    "dyeable_liquids:light_blue_lava",
+    "dyeable_liquids:blue_lava",
+    "dyeable_liquids:purple_lava",
+    "dyeable_liquids:magenta_lava",
+    "dyeable_liquids:pink_lava",
+
     "dyeable_liquids:soap_water"
+
   ]
 }

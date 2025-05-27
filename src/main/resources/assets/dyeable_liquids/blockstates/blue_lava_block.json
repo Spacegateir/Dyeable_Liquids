@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dyeable_liquids:block/blue_lava_block"
+    }
+  }
+}

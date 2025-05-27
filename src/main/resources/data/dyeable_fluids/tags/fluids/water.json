@@ -2,8 +2,38 @@
   "replace": false,
   "values": [
 
-    "dyeable_liquids:soap_water",
-    "dyeable_liquids:flowing_soap_water"
+    "dyeable_liquids:white_water",
+    "dyeable_liquids:flowing_white_water",
+    "dyeable_liquids:light_gray_water",
+    "dyeable_liquids:flowing_light_gray_water",
+    "dyeable_liquids:gray_water",
+    "dyeable_liquids:flowing_gray_water",
+    "dyeable_liquids:black_water",
+    "dyeable_liquids:flowing_black_water",
+    "dyeable_liquids:brown_water",
+    "dyeable_liquids:flowing_brown_water",
+    "dyeable_liquids:red_water",
+    "dyeable_liquids:flowing_red_water",
+    "dyeable_liquids:orange_water",
+    "dyeable_liquids:flowing_orange_water",
+    "dyeable_liquids:yellow_water",
+    "dyeable_liquids:flowing_yellow_water",
+    "dyeable_liquids:lime_water",
+    "dyeable_liquids:flowing_lime_water",
+    "dyeable_liquids:green_water",
+    "dyeable_liquids:flowing_green_water",
+    "dyeable_liquids:cyan_water",
+    "dyeable_liquids:flowing_cyan_water",
+    "dyeable_liquids:light_blue_water",
+    "dyeable_liquids:flowing_light_blue_water",
+    "dyeable_liquids:blue_water",
+    "dyeable_liquids:flowing_blue_water",
+    "dyeable_liquids:purple_water",
+    "dyeable_liquids:flowing_purple_water",
+    "dyeable_liquids:magenta_water",
+    "dyeable_liquids:flowing_magenta_water",
+    "dyeable_liquids:pink_water",
+    "dyeable_liquids:flowing_pink_water"
 
   ]
 }
