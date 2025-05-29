@@ -18,7 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
-import net.spacegateir.dyeableliquids.blocks.ModFluidBlock;
+import net.spacegateir.dyeableliquids.blocks.custom.ModFluidRed;
 import net.spacegateir.dyeableliquids.fluid.ModFluids;
 import net.spacegateir.dyeableliquids.items.ModItems;
 import net.spacegateir.dyeableliquids.util.ModTags;
@@ -183,7 +183,7 @@ public abstract class RedLavaFluid extends FlowableFluid {
         // RED_LAVA + RED_WATER => RED_CONCRETE
         if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
             if (this.isIn(ModTags.Fluids.RED_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.RED_WATER_DL)) {
-                if (state.getBlock() instanceof ModFluidBlock) {
+                if (state.getBlock() instanceof ModFluidRed) {
                     world.setBlockState(pos, Blocks.RED_CONCRETE.getDefaultState(), Block.NOTIFY_ALL);
                 }
                 this.playExtinguishEvent(world, pos);

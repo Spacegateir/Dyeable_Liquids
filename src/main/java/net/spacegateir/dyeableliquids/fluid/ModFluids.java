@@ -10,7 +10,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spacegateir.dyeableliquids.DyeableLiquids;
 import net.spacegateir.dyeableliquids.blocks.custom.*;
-import net.spacegateir.dyeableliquids.blocks.ModFluidBlock;
 import net.spacegateir.dyeableliquids.fluid.lava.*;
 import net.spacegateir.dyeableliquids.fluid.water.*;
 
@@ -51,7 +50,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_GRAY_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_gray_water"), new GrayWaterFluid.Flowing());
     public static final Block GRAY_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "gray_water_block"), new ModFluidBlock(STILL_GRAY_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "gray_water_block"), new ModFluidGray(STILL_GRAY_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Black
@@ -69,7 +68,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_BROWN_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_brown_water"), new BrownWaterFluid.Flowing());
     public static final Block BROWN_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "brown_water_block"), new ModFluidBlock(STILL_BROWN_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "brown_water_block"), new ModFluidBrown(STILL_BROWN_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Red
@@ -78,7 +77,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_RED_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_red_water"), new RedWaterFluid.Flowing());
     public static final Block RED_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "red_water_block"), new ModFluidBlock(STILL_RED_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "red_water_block"), new ModFluidRed(STILL_RED_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Orange
@@ -87,7 +86,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_ORANGE_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_orange_water"), new OrangeWaterFluid.Flowing());
     public static final Block ORANGE_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "orange_water_block"), new ModFluidBlock(STILL_ORANGE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "orange_water_block"), new ModFluidOrange(STILL_ORANGE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Yellow
@@ -96,7 +95,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_YELLOW_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_yellow_water"), new YellowWaterFluid.Flowing());
     public static final Block YELLOW_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "yellow_water_block"), new ModFluidBlock(STILL_YELLOW_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "yellow_water_block"), new ModFluidYellow(STILL_YELLOW_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Lime
@@ -105,7 +104,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_LIME_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_lime_water"), new LimeWaterFluid.Flowing());
     public static final Block LIME_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "lime_water_block"), new ModFluidBlock(STILL_LIME_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "lime_water_block"), new ModFluidLime(STILL_LIME_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Green
@@ -114,7 +113,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_GREEN_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_green_water"), new GreenWaterFluid.Flowing());
     public static final Block GREEN_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "green_water_block"), new ModFluidBlock(STILL_GREEN_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "green_water_block"), new ModFluidGreen(STILL_GREEN_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Cyan
@@ -123,7 +122,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_CYAN_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_cyan_water"), new CyanWaterFluid.Flowing());
     public static final Block CYAN_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "cyan_water_block"), new ModFluidBlock(STILL_CYAN_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "cyan_water_block"), new ModFluidCyan(STILL_CYAN_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Light Blue
@@ -132,7 +131,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_LIGHT_BLUE_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_light_blue_water"), new LightBlueWaterFluid.Flowing());
     public static final Block LIGHT_BLUE_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "light_blue_water_block"), new ModFluidBlock(STILL_LIGHT_BLUE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "light_blue_water_block"), new ModFluidLightBlue(STILL_LIGHT_BLUE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Blue
@@ -141,7 +140,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_BLUE_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_blue_water"), new BlueWaterFluid.Flowing());
     public static final Block BLUE_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "blue_water_block"), new ModFluidBlock(STILL_BLUE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "blue_water_block"), new ModFluidBlue(STILL_BLUE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Purple
@@ -150,7 +149,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_PURPLE_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_purple_water"), new PurpleWaterFluid.Flowing());
     public static final Block PURPLE_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "purple_water_block"), new ModFluidBlock(STILL_PURPLE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "purple_water_block"), new ModFluidPurple(STILL_PURPLE_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Magenta
@@ -159,7 +158,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_MAGENTA_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_magenta_water"), new MagentaWaterFluid.Flowing());
     public static final Block MAGENTA_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "magenta_water_block"), new ModFluidBlock(STILL_MAGENTA_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "magenta_water_block"), new ModFluidMagenta(STILL_MAGENTA_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
     // Pink
@@ -168,7 +167,7 @@ public class ModFluids {
     public static final FlowableFluid FLOWING_PINK_WATER = Registry.register(Registries.FLUID,
             new Identifier(DyeableLiquids.MOD_ID, "flowing_pink_water"), new PinkWaterFluid.Flowing());
     public static final Block PINK_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "pink_water_block"), new ModFluidBlock(STILL_PINK_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+            "pink_water_block"), new ModFluidPink(STILL_PINK_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
             .replaceable().liquid()));
 
 

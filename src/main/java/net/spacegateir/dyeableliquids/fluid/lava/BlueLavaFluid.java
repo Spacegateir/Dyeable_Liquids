@@ -18,7 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
-import net.spacegateir.dyeableliquids.blocks.ModFluidBlock;
+import net.spacegateir.dyeableliquids.blocks.custom.ModFluidBlue;
 import net.spacegateir.dyeableliquids.fluid.ModFluids;
 import net.spacegateir.dyeableliquids.items.ModItems;
 import net.spacegateir.dyeableliquids.util.ModTags;
@@ -183,7 +183,7 @@ public abstract class BlueLavaFluid extends FlowableFluid {
         // BLUE_LAVA + BLUE_WATER => BLUE_CONCRETE
         if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
             if (this.isIn(ModTags.Fluids.BLUE_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.BLUE_WATER_DL)) {
-                if (state.getBlock() instanceof ModFluidBlock) {
+                if (state.getBlock() instanceof ModFluidBlue) {
                     world.setBlockState(pos, Blocks.BLUE_CONCRETE.getDefaultState(), Block.NOTIFY_ALL);
                 }
                 this.playExtinguishEvent(world, pos);

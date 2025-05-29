@@ -18,7 +18,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.*;
-import net.spacegateir.dyeableliquids.blocks.ModFluidBlock;
+import net.spacegateir.dyeableliquids.blocks.custom.ModFluidGray;
 import net.spacegateir.dyeableliquids.fluid.ModFluids;
 import net.spacegateir.dyeableliquids.items.ModItems;
 import net.spacegateir.dyeableliquids.util.ModTags;
@@ -183,7 +183,7 @@ public abstract class GrayLavaFluid extends FlowableFluid {
         // GRAY_LAVA + GRAY_WATER => GRAY_CONCRETE
         if (direction == Direction.DOWN) {FluidState fluidState2 = world.getFluidState(pos);
             if (this.isIn(ModTags.Fluids.GRAY_LAVA_DL) && fluidState2.isIn(ModTags.Fluids.GRAY_WATER_DL)) {
-                if (state.getBlock() instanceof ModFluidBlock) {
+                if (state.getBlock() instanceof ModFluidGray) {
                     world.setBlockState(pos, Blocks.GRAY_CONCRETE.getDefaultState(), Block.NOTIFY_ALL);
                 }
                 this.playExtinguishEvent(world, pos);
