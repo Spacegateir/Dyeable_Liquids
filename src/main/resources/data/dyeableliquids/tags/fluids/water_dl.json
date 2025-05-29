@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+
+    "#minecraft:water",
+
+    "dyeableliquids:white_water",
+    "dyeableliquids:flowing_white_water",
+    "dyeableliquids:light_gray_water",
+    "dyeableliquids:flowing_light_gray_water",
+    "dyeableliquids:gray_water",
+    "dyeableliquids:flowing_gray_water",
+    "dyeableliquids:black_water",
+    "dyeableliquids:flowing_black_water",
+    "dyeableliquids:brown_water",
+    "dyeableliquids:flowing_brown_water",
+    "dyeableliquids:red_water",
+    "dyeableliquids:flowing_red_water",
+    "dyeableliquids:orange_water",
+    "dyeableliquids:flowing_orange_water",
+    "dyeableliquids:yellow_water",
+    "dyeableliquids:flowing_yellow_water",
+    "dyeableliquids:lime_water",
+    "dyeableliquids:flowing_lime_water",
+    "dyeableliquids:green_water",
+    "dyeableliquids:flowing_green_water",
+    "dyeableliquids:cyan_water",
+    "dyeableliquids:flowing_cyan_water",
+    "dyeableliquids:light_blue_water",
+    "dyeableliquids:flowing_light_blue_water",
+    "dyeableliquids:blue_water",
+    "dyeableliquids:flowing_blue_water",
+    "dyeableliquids:purple_water",
+    "dyeableliquids:flowing_purple_water",
+    "dyeableliquids:magenta_water",
+    "dyeableliquids:flowing_magenta_water",
+    "dyeableliquids:pink_water",
+    "dyeableliquids:flowing_pink_water"
+
+  ]
+}

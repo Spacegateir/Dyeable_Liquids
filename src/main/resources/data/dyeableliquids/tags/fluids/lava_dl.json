@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+
+    "#minecraft:lava",
+
+    "dyeableliquids:white_lava",
+    "dyeableliquids:flowing_white_lava",
+    "dyeableliquids:light_gray_lava",
+    "dyeableliquids:flowing_light_gray_lava",
+    "dyeableliquids:gray_lava",
+    "dyeableliquids:flowing_gray_lava",
+    "dyeableliquids:black_lava",
+    "dyeableliquids:flowing_black_lava",
+    "dyeableliquids:brown_lava",
+    "dyeableliquids:flowing_brown_lava",
+    "dyeableliquids:red_lava",
+    "dyeableliquids:flowing_red_lava",
+    "dyeableliquids:orange_lava",
+    "dyeableliquids:flowing_orange_lava",
+    "dyeableliquids:yellow_lava",
+    "dyeableliquids:flowing_yellow_lava",
+    "dyeableliquids:lime_lava",
+    "dyeableliquids:flowing_lime_lava",
+    "dyeableliquids:green_lava",
+    "dyeableliquids:flowing_green_lava",
+    "dyeableliquids:cyan_lava",
+    "dyeableliquids:flowing_cyan_lava",
+    "dyeableliquids:light_blue_lava",
+    "dyeableliquids:flowing_light_blue_lava",
+    "dyeableliquids:blue_lava",
+    "dyeableliquids:flowing_blue_lava",
+    "dyeableliquids:purple_lava",
+    "dyeableliquids:flowing_purple_lava",
+    "dyeableliquids:magenta_lava",
+    "dyeableliquids:flowing_magenta_lava",
+    "dyeableliquids:pink_lava",
+    "dyeableliquids:flowing_pink_lava"
+
+  ]
+}

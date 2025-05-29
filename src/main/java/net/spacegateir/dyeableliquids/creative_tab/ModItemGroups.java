@@ -13,7 +13,7 @@ import net.spacegateir.dyeableliquids.items.ModItems;
 public class ModItemGroups {
 
     public static final ItemGroup DYEABLE_LIQUIDS = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(DyeableLiquids.MOD_ID,"dyeable_liquids"),
+            new Identifier(DyeableLiquids.MOD_ID,"dyeableliquids"),
             FabricItemGroup.builder().displayName(Text.translatable("Dyeable Liquids"))
                     .icon(() -> new ItemStack(ModItems.SOAP_WATER_BUCKET)).entries((displayContext, entries) -> {
 

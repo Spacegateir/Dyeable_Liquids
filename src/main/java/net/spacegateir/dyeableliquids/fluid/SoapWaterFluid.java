@@ -56,7 +56,8 @@ public abstract class SoapWaterFluid extends FlowableFluid {
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return false;
+        // Allow replacement like vanilla water (e.g. lava replacing water downward)
+        return direction == Direction.DOWN && !fluid.isIn(net.minecraft.registry.tag.FluidTags.WATER);
     }
 
     @Override

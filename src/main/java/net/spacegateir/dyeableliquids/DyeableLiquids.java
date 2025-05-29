@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 public class DyeableLiquids implements ModInitializer {
 
-	public static final String MOD_ID = "dyeable_liquids";
+	public static final String MOD_ID = "dyeableliquids";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	@Override
@@ -19,6 +19,9 @@ public class DyeableLiquids implements ModInitializer {
 		ModItems.registerModItems();
 		ModFluids.registerFluids();
 		ModItemGroups.registerItemGroups();
+
+
+
 
 		LOGGER.info("Hello Fabric world!");
 	}

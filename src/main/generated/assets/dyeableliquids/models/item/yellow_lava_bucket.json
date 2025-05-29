@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dyeableliquids:item/yellow_lava_bucket"
+  }
+}

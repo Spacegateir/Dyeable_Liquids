@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dyeableliquids:item/pink_water_bucket"
+  }
+}

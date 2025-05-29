@@ -1,0 +1,7 @@
+{
+  "parent": "block/liquid",
+  "textures": {
+    "still": "dyeableliquids:block/orange_lava_still",
+    "flow": "dyeableliquids:block/orange_lava_flow"
+  }
+}

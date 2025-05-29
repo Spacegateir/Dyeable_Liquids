@@ -11,10 +11,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldAccess;
-import net.minecraft.world.WorldView;
+import net.minecraft.world.*;
 import net.spacegateir.dyeableliquids.fluid.ModFluids;
 import net.spacegateir.dyeableliquids.items.ModItems;
 
@@ -31,7 +28,7 @@ public abstract class BlueWaterFluid extends FlowableFluid {
 
     @Override
     protected boolean isInfinite(World world) {
-        return true;
+        return world.getGameRules().getBoolean(GameRules.WATER_SOURCE_CONVERSION);
     }
 
     @Override
@@ -57,7 +54,8 @@ public abstract class BlueWaterFluid extends FlowableFluid {
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return false;
+        // Allow replacement like vanilla water (e.g. lava replacing water downward)
+        return direction == Direction.DOWN && !fluid.isIn(net.minecraft.registry.tag.FluidTags.WATER);
     }
 
     @Override
