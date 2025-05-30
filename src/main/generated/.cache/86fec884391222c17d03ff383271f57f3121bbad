@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-29T15:06:40.9003173	Dyeable Liquids/Model Definitions
+// 1.20.1	2025-05-30T20:28:14.7146567	Dyeable Liquids/Model Definitions
 e2fa176526d73451efad9895c1f296fdb65da6f1 assets\dyeableliquids\models\item\magenta_water_bucket.json
 a22ba9240752a30430f58c9bbbe7848817d58880 assets\dyeableliquids\models\item\brown_water_bucket.json
 1c4eefed15cfe3ce8e04c76b2f74d088ab59d1e0 assets\dyeableliquids\models\item\cyan_lava_bucket.json
@@ -30,5 +30,4 @@ a64520610464178ae7d0e0a41d23250ff43533b9 assets\dyeableliquids\models\item\yello
 f6705a2e6d7ea543aa447127f1ea0e8f222cdd7e assets\dyeableliquids\models\item\green_water_bucket.json
 335687a5d2ef32514aff7c854cac1b323cb5cd64 assets\dyeableliquids\models\item\brown_lava_bucket.json
 b6c8cc8c277dcf21c6a6274ff22e3364d0d898df assets\dyeableliquids\models\item\red_lava_bucket.json
-bc90eaca5baa18923292f89cda360f3e080765cc assets\dyeableliquids\models\item\soap_water_bucket.json
 758bd89ba74102bcb739c8f78bee378b395c5a1a assets\dyeableliquids\models\item\black_water_bucket.json

@@ -21,8 +21,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
 
-        itemModelGenerator.register(ModItems.SOAP_WATER_BUCKET, Models.GENERATED);
-
         itemModelGenerator.register(ModItems.WHITE_WATER_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.LIGHT_GRAY_WATER_BUCKET, Models.GENERATED);
         itemModelGenerator.register(ModItems.GRAY_WATER_BUCKET, Models.GENERATED);

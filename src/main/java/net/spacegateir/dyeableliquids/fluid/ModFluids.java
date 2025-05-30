@@ -9,22 +9,11 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.spacegateir.dyeableliquids.DyeableLiquids;
-import net.spacegateir.dyeableliquids.blocks.custom.*;
+import net.spacegateir.dyeableliquids.block.fluidblocks.*;
 import net.spacegateir.dyeableliquids.fluid.lava.*;
 import net.spacegateir.dyeableliquids.fluid.water.*;
 
 public class ModFluids {
-
-    public static final FlowableFluid STILL_SOAP_WATER = Registry.register(Registries.FLUID,
-            new Identifier(DyeableLiquids.MOD_ID, "soap_water"), new SoapWaterFluid.Still());
-    public static final FlowableFluid FLOWING_SOAP_WATER = Registry.register(Registries.FLUID,
-            new Identifier(DyeableLiquids.MOD_ID, "flowing_soap_water"), new SoapWaterFluid.Flowing());
-
-    public static final Block SOAP_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(DyeableLiquids.MOD_ID,
-            "soap_water_block"), new FluidBlock(ModFluids.STILL_SOAP_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
-            .replaceable().liquid()));
-
-
 
     // White
     public static final FlowableFluid STILL_WHITE_WATER = Registry.register(Registries.FLUID,

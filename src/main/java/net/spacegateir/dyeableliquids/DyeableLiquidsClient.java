@@ -17,11 +17,6 @@ public class DyeableLiquidsClient implements ClientModInitializer {
 
         ModClient.registerFluidRenderers();
 
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_SOAP_WATER, ModFluids.FLOWING_SOAP_WATER,
-                SimpleFluidRenderHandler.coloredWater(0xA1E038D0));
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
-                ModFluids.STILL_SOAP_WATER, ModFluids.FLOWING_SOAP_WATER);
-
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_WHITE_WATER, ModFluids.FLOWING_WHITE_WATER,
                 SimpleFluidRenderHandler.coloredWater(0xA1FFFFFF));
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),

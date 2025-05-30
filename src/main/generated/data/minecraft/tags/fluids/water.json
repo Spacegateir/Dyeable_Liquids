@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dyeableliquids:flowing_soap_water",
-    "dyeableliquids:soap_water",
     "dyeableliquids:flowing_white_water",
     "dyeableliquids:white_water",
     "dyeableliquids:flowing_light_gray_water",

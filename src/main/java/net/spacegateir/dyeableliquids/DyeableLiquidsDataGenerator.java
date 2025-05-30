@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.spacegateir.dyeableliquids.datagen.ModFluidTagProvider;
 import net.spacegateir.dyeableliquids.datagen.ModModelProvider;
+import net.spacegateir.dyeableliquids.datagen.ModRecipeGenerator;
 
 public class DyeableLiquidsDataGenerator implements DataGeneratorEntrypoint {
 
@@ -13,6 +14,7 @@ public class DyeableLiquidsDataGenerator implements DataGeneratorEntrypoint {
 
 		pack.addProvider(ModFluidTagProvider::new);
 		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModRecipeGenerator::new);
 
 	}
 }

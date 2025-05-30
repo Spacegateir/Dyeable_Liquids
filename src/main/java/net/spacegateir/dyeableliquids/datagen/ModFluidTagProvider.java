@@ -18,9 +18,6 @@ public class ModFluidTagProvider extends FabricTagProvider.FluidTagProvider {
 
         this.getOrCreateTagBuilder(FluidTags.WATER)
 
-                .add(ModFluids.FLOWING_SOAP_WATER)
-                .add(ModFluids.STILL_SOAP_WATER)
-
                 .add(ModFluids.FLOWING_WHITE_WATER)
                 .add(ModFluids.STILL_WHITE_WATER)
                 .add(ModFluids.FLOWING_LIGHT_GRAY_WATER)

@@ -10,11 +10,6 @@ import net.spacegateir.dyeableliquids.fluid.ModFluids;
 
 public class ModItems {
 
-    public static final Item SOAP_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(DyeableLiquids.MOD_ID,
-            "soap_water_bucket"), new BucketItem(ModFluids.STILL_SOAP_WATER,
-            new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
-
 // Water
 
     public static final Item WHITE_WATER_BUCKET = Registry.register(Registries.ITEM, new Identifier(DyeableLiquids.MOD_ID,
