@@ -34,4 +34,5 @@ public class BlackLavaCauldronBlock extends AbstractCauldronBlock {
     public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
         return 3;
     }
+
 }

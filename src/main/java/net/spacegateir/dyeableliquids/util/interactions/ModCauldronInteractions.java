@@ -1,23 +1,16 @@
 package net.spacegateir.dyeableliquids.util.interactions;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.block.LeveledCauldronBlock;
 import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsage;
 import net.minecraft.item.Items;
-import net.minecraft.potion.PotionUtil;
-import net.minecraft.potion.Potions;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.event.GameEvent;
 import net.spacegateir.dyeableliquids.block.ModBlocks;
 import net.spacegateir.dyeableliquids.items.ModItems;
 
@@ -75,33 +68,49 @@ public class ModCauldronInteractions implements CauldronBehavior {
             final String waterBucketName = color.toUpperCase() + "_WATER_BUCKET";
             final String lavaCauldronBlockName = color.toUpperCase() + "_LAVA_CAULDRON_BLOCK";
             final String waterCauldronBlockName = color.toUpperCase() + "_WATER_CAULDRON_BLOCK";
+            final String dyeItemName = color.toUpperCase() + "_DYE";
 
             try {
                 Item lavaBucket = (Item) ModItems.class.getField(lavaBucketName).get(null);
                 Item waterBucket = (Item) ModItems.class.getField(waterBucketName).get(null);
+                Item dyeItem = (Item) Items.class.getField(dyeItemName).get(null); // Minecraft vanilla dye
 
                 BlockState lavaCauldron = ((net.minecraft.block.Block) ModBlocks.class.getField(lavaCauldronBlockName).get(null)).getDefaultState();
                 BlockState waterCauldron = ((net.minecraft.block.Block) ModBlocks.class.getField(waterCauldronBlockName).get(null)).getDefaultState();
 
+                // Fill cauldrons
                 EMPTY_CAULDRON_BEHAVIOR.put(lavaBucket, (state, world, pos, player, hand, stack) ->
                         CauldronBehavior.fillCauldron(world, pos, player, hand, stack, lavaCauldron, SoundEvents.ITEM_BUCKET_EMPTY_LAVA));
-
                 EMPTY_CAULDRON_BEHAVIOR.put(waterBucket, (state, world, pos, player, hand, stack) ->
                         CauldronBehavior.fillCauldron(world, pos, player, hand, stack, waterCauldron, SoundEvents.ITEM_BUCKET_EMPTY));
 
+                // Empty cauldrons
                 CauldronBehavior lavaBehavior = (state, world, pos, player, hand, stack) ->
                         CauldronBehavior.emptyCauldron(state, world, pos, player, hand, stack, new ItemStack(lavaBucket), s -> true, SoundEvents.ITEM_BUCKET_FILL_LAVA);
-
                 CauldronBehavior waterBehavior = (state, world, pos, player, hand, stack) ->
                         CauldronBehavior.emptyCauldron(state, world, pos, player, hand, stack, new ItemStack(waterBucket), s -> true, SoundEvents.ITEM_BUCKET_FILL);
 
-                ModCauldronInteractions.class.getField(color.toUpperCase() + "_LAVA_CAULDRON_BEHAVIOR").get(null)
-                        .getClass().getMethod("put", Object.class, Object.class).invoke(
-                                ModCauldronInteractions.class.getField(color.toUpperCase() + "_LAVA_CAULDRON_BEHAVIOR").get(null), Items.BUCKET, lavaBehavior);
+                Map<Item, CauldronBehavior> lavaMap = (Map<Item, CauldronBehavior>) ModCauldronInteractions.class
+                        .getField(color.toUpperCase() + "_LAVA_CAULDRON_BEHAVIOR").get(null);
+                Map<Item, CauldronBehavior> waterMap = (Map<Item, CauldronBehavior>) ModCauldronInteractions.class
+                        .getField(color.toUpperCase() + "_WATER_CAULDRON_BEHAVIOR").get(null);
 
-                ModCauldronInteractions.class.getField(color.toUpperCase() + "_WATER_CAULDRON_BEHAVIOR").get(null)
-                        .getClass().getMethod("put", Object.class, Object.class).invoke(
-                                ModCauldronInteractions.class.getField(color.toUpperCase() + "_WATER_CAULDRON_BEHAVIOR").get(null), Items.BUCKET, waterBehavior);
+                lavaMap.put(Items.BUCKET, lavaBehavior);
+                waterMap.put(Items.BUCKET, waterBehavior);
+
+                WATER_CAULDRON_BEHAVIOR.put(dyeItem, (state, world, pos, player, hand, stack) -> {
+                    world.setBlockState(pos, waterCauldron);
+                    stack.decrement(1);
+                    world.playSound(null, pos, SoundEvents.ITEM_DYE_USE, player.getSoundCategory(), 1.0F, 1.0F);
+                    return ActionResult.success(world.isClient);
+                });
+
+                LAVA_CAULDRON_BEHAVIOR.put(dyeItem, (state, world, pos, player, hand, stack) -> {
+                    world.setBlockState(pos, lavaCauldron);
+                    stack.decrement(1);
+                    world.playSound(null, pos, SoundEvents.ITEM_DYE_USE, player.getSoundCategory(), 1.0F, 0.75F);
+                    return ActionResult.success(world.isClient);
+                });
 
             } catch (Exception e) {
                 System.err.println("Failed to register cauldron behavior for color: " + color);
