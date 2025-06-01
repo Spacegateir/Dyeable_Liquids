@@ -5,9 +5,8 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.fluid.FlowableFluid;
-import net.minecraft.util.Identifier;
 import net.spacegateir.dyeableliquids.fluid.ModFluids;
+import net.spacegateir.dyeableliquids.util.interactions.ModCauldronInteractions;
 import net.spacegateir.dyeableliquids.util.render_handler.ModClient;
 
 public class DyeableLiquidsClient implements ClientModInitializer {
@@ -16,6 +15,7 @@ public class DyeableLiquidsClient implements ClientModInitializer {
     public void onInitializeClient() {
 
         ModClient.registerFluidRenderers();
+        ModCauldronInteractions.boostrap();
 
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_WHITE_WATER, ModFluids.FLOWING_WHITE_WATER,
                 SimpleFluidRenderHandler.coloredWater(0xA1FFFFFF));
