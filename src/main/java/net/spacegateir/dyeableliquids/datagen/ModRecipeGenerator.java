@@ -89,6 +89,7 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
         dyeToLavaBucket.forEach((color, bucketItem) -> {
             ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, bucketItem)
                     .input(Items.LAVA_BUCKET)
+                    .input(Items.BUCKET)
                     .input(dyeItems.get(color))
                     .criterion("has_lava_bucket", conditionsFromItem(Items.LAVA_BUCKET))
                     .criterion("has_dye", conditionsFromItem(dyeItems.get(color)))

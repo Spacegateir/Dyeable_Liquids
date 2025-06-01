@@ -7,6 +7,7 @@ import net.spacegateir.dyeableliquids.creative_tab.ModItemGroups;
 import net.spacegateir.dyeableliquids.fluid.ModFluids;
 import net.spacegateir.dyeableliquids.items.ModItems;
 import net.spacegateir.dyeableliquids.util.ModRegistries;
+import net.spacegateir.dyeableliquids.util.interactions.ModCauldronInteractions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,10 +26,14 @@ public class DyeableLiquids implements ModInitializer {
 
 		ModRegistries.registerModStuffs();
 
+		ModCauldronInteractions.boostrap();
+
 
 
 
 
 		LOGGER.info("Hello Fabric world!");
 	}
+
+
 }

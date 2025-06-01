@@ -8,7 +8,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.spacegateir.dyeableliquids.DyeableLiquids;
-import net.spacegateir.dyeableliquids.block.ModBlocks;
 import net.spacegateir.dyeableliquids.items.ModItems;
 
 public class ModItemGroups {
